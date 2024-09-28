@@ -27,7 +27,7 @@ Traditional manual patching is time-consuming and error-prone. We introduce an a
 Our models successfully identified software vulnerabilities and provided actionable advice:
 - **QA Model**: Found vulnerability causes and offered patch suggestions.
 - **GPT-2 Model**: Improved extended responses using fine-tuned datasets.
-- **ChatOpenAI Model**: Delivered the most comprehensive and contextually relevant recommendations.
+- **ChatOpenAI Model**: Delivered the <ins>most comprehensive and contextually relevant recommendations.</ins>
 
 ## 🌍 Business & Social Impact
 - **Business**: Reduces the time and cost of securing software, increasing trust and reliability.
@@ -36,13 +36,19 @@ Our models successfully identified software vulnerabilities and provided actiona
 ## 📄 Screenshots of Results
 
 ### QA Model Output:
-![QA Output](assets/qa-output.png)
+- What is Cross Site Scripting?
+<img src="assets/QnA-Cross-Site-Scripting.png" alt="QA Output" width="500"/>
 
 ### GPT-2 Model Output:
-![GPT-2 Output](assets/gpt2-output.png)
+- What is Cross Site Scripting?
+<img src="assets/GPT2-Cross-Site-Scripting.png" alt="QA Output" width="500"/>
 
 ### ChatOpenAI Model Output:
-![ChatOpenAI Output](assets/chatopenai-output.png)
+- What is Cross Site Scripting? And how to solve it?
+<img src="assets/Chat-Open-AI-Cross-Site-Scripting.png" alt="QA Output" width="500"/>
+
+- What is SQL Injection? And how to solve it?
+<img src="assets/Chat-Open-AI-SQL.png" alt="QA Output" width="500"/>
 
 ## 📋 How to Reproduce Results
 
@@ -54,10 +60,11 @@ Our models successfully identified software vulnerabilities and provided actiona
 ### 2. GPT-2 Model
 - **Step 1**: Fine-tune GPT-2 with the combined dataset (HCL + OWASP).
 - **Step 2**: Set up a text generation pipeline using Hugging Face.
+- **Step 3**: Query the system using prompts like "What is Cross-Site Scripting?"
 
 ### 3. ChatOpenAI Model
 - **Step 1**: Create a database using Chroma and Langchain's RAG.
-- **Step 2**: Query the model with prompts like "What is SQL injection?"
+- **Step 2**: Query the model with prompts like "What is SQL injection? And how do I solve it?"
 
 ## 🛠 Tools to Run the Project
 - Python, Hugging Face, Haystack, OpenAI API
@@ -66,6 +73,3 @@ Our models successfully identified software vulnerabilities and provided actiona
 ## 🏗 Future Work
 - Integrate the model into a chat-bot within coding environments to offer instant remediation advice to developers.
 - Continuously train the model on new vulnerabilities.
-
-## ✨ License
-This project is licensed under the MIT License.
